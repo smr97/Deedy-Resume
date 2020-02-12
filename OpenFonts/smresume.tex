@@ -1,0 +1,270 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{smresume}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Saurabh}{Raje}{\href{mailto:saurabh.mraje@gmail.com}{saurabh.mraje@gmail.com}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{BITS Pilani}
+\descript{BE in Computer Science}
+\location{May 2019 | Pilani, India}
+\subsectionsep
+%\subsection{Cornell University}
+%\descript{BS in Computer Science}
+%\location{May 2014 | Ithaca, NY}
+%College of Engineering \\
+%Magna Cum Laude\\
+%\location{ Cum. GPA: 3.83 / 4.0 \\
+%Major GPA: 3.9 / 4.0}
+
+\subsection{Delhi Public School}
+\location{July 2015|  Gurgaon, India}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Blog:// \href{https://smr97.github.io/categories/}{\bf smr97.github.io} \\
+Github:// \href{https://github.com/smr97}{\bf smr97} \\
+LinkedIn://  \href{https://www.linkedin.com/in/saurabhmraje/}{\bf saurabhmraje} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+%\subsection{Graduate}
+%Advanced Machine Learning \\
+%Open Source Software Engineering \\
+%Advanced Interactive Graphics \\
+%Compilers + Practicum \\
+%Cloud Computing \\
+%Evolutionary Computation \\
+%Defending Computer Networks \\
+%Machine Learning \\
+%\sectionsep
+
+\subsection{Undergraduate}
+Parallel Computing \\
+Neural Networks and Fuzzy Logic \\
+Operating Systems \\
+Compiler construction \\
+Data Structures and Algorithms \\
+Database Systems \\
+Object Oriented Programming \\
+Principles of Programming Languages \\
+Computer Networks \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming Languages}
+Rust \textbullet{} Java \textbullet{} Python \textbullet{} 
+C \textbullet{} C++ 
+\subsectionsep
+
+\subsection{ML frameworks}
+Tensorflow \textbullet{} Pytorch \textbullet{} Caffe
+\subsectionsep
+
+\subsection{HPC frameworks}
+OpenMPI \textbullet{} OpenMP \textbullet{} CUDA
+\subsectionsep
+
+\subsection{Human languages}
+Marathi \textbullet{} Hindi \textbullet{} English \textbullet{} French
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Awards} 
+%\begin{tighttabular}%{rll}
+%2018 & 1\textsuperscript{st} & Best Poster, IBM Research\\
+%    2018 & 1\textsuperscript{st} & Hack.Banglore, Mercedes-Benz\\
+%\end{tighttabular}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{IBM Research}
+\descript{| Research Engineer }
+\location{August 2019 – Present | Delhi, India}
+\vspace{\topsep} % Increases spacing if they overlap
+\begin{tightemize}
+\item Working with the HPC group to optimise deep language models (BERT).
+\item Co-developed a novel technique (PoWER-BERT) to accelerate BERT model.
+\item Also working on integrating this into IBM's \emph{\href{https://www.ibm.com/in-en/cloud/watson-natural-language-understanding}{Watson NLU}} product.
+\end{tightemize}
+\subsectionsep
+
+\runsubsection{ETH Zurich - \emph{\href{https://spcl.inf.ethz.ch/}{SPCL lab}}}
+\descript{| Scientific Assistant }
+\location{March 2019 - August 2019 | Zurich, Switzerland}
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Used the \emph{\href{http://spcl.inf.ethz.ch/Research/DAPP/}{DACE}} domain specific language to accelerate \textbf{deep learning}.
+\item Built a Tensorflow graph parser that would generate code for popular math operations on heterogenous computing platforms.
+\item Added graph transformations to language IR to generate faster kernels.
+\end{tightemize}
+\subsectionsep
+
+\runsubsection{IBM Research}
+\descript{| Research Intern }
+\location{May 2018 – August 2018 | Delhi, India}
+\begin{tightemize}\item Worked on training \textbf{deep neural networks} under memory constraints.
+\item Implemented variable batch sizing to reduce training time by 20\%. 
+\item Developed a scalable optimization algorithm for \textbf{Tensor Tucker Decomposition}.
+\end{tightemize}
+\subsectionsep
+
+\runsubsection{INRIA}
+\descript{| Research Intern }
+\location{September 2018 – February 2019 | Grenoble, France}
+\begin{tightemize}
+\item Worked on a new parallelization library \emph{\href{http://datamove.imag.fr/frederic.wagner/rayon-adaptive.html}{Rayon Adaptive}} for the \textbf{Rust} language.
+\item This automatically parallelizes functional code using \textbf{adaptive task splitting}. 
+\item Contributed to a visualisation framework \emph{\href{http://datamove.imag.fr/frederic.wagner/rayon-logs.html}{Rayon-Logs}} that shows parallel runs.
+\end{tightemize}
+\subsectionsep
+
+% \runsubsection{UST Global}
+% \descript{| Software Engineering Intern }
+% \location{May 2017 – July 2017 | Trivandrum, India}
+% \begin{tightemize}
+% \item Developed a decentralised malware detection engine.item Trained a \textbf{deep belief network} to classify EXE files
+% \item Used the \textbf{Ethereum} network for decentralised consensus among the learners.
+% \item This system achieved about 89\% accuracy in detecting malware.
+% \end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Projects
+%    Data structure design
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Pedestrian detection system}
+\descript{| Mercedes Benz Research}
+%\location{Jan 2014 – Jan 2015 | Ithaca, NY}
+\begin{tightemize}
+\item \textbf{Won} the Daimler autonomous driving hackathon with a CNN model. 
+\item Presented our solution at the \textbf{Mobile World Congress}.
+%\item Was invited by Daimler to present this at the \textbf{Mobile World Congress}.
+\end{tightemize}
+
+\runsubsection{On-board computer for a nanosatellite}
+\descript{| \href{http://www.team-anant.org/}{Team Anant}}
+\begin{tightemize}
+    \item Lead a student research initiative to build a computer for a nanosatellite.
+    \item Wrote a parallel scheduler to run various mission critical modules.
+    \item Wrote some kernel device drivers for CMOS sensors on an I2C bus.
+    \item The satellite is scheduled for \textbf{launch by ISRO} in 2020.
+\end{tightemize}
+\section{Publications} 
+\end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{13pt}
+\bibliographystyle{abbrv}
+\bibliography{publications}
+\nocite{*}
+\end{document}  \documentclass[]{article}
